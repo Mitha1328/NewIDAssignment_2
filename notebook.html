@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Almendra+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Note Book</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+        body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Almendra SC";
+        }
+        nav{
+            font-family: 'Poppins', sans-serif;;
+        }
+
+        h1 {
+        color: #242424;
+        margin: 0;
+        padding: 20px 30px;
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: normal;
+        }
+
+        ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        li {
+        color: #242424;
+        font-size: 20px;
+        padding: 20px;
+        opacity: 1;
+        transition: opacity 0.3s;
+        display: flex;
+        justify-content: space-between;
+        }
+
+        input {
+        font-family: "Almendra SC";
+        font-size: 20px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        border: none;
+        outline: none;
+        }
+
+        input:focus {
+        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+        }
+
+        .completed {
+        color: gray;
+        text-decoration: line-through;
+        }
+        
+        .bg-image_nb {
+        background: url("https://vignette.wikia.nocookie.net/hogwarts-life/images/7/7f/Gryffindor_boys_dorm1.png/revision/latest?cb=20180421181416");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(5px);
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        }
+
+        .container_nb {
+        position: relative;
+        top: 50px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        width: 560px;
+        margin: 0 auto;
+        background: url("https://www.filterforge.com/filters/11294.jpg");
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="ParallaxVideo">
+        <video autoplay muted loop>
+        <source src="Galaxy_1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <nav>
+        <div class="container_index"></div>
+            <i class="fa fa-bars"></i>
+            <a href="index.html" class="nav-logo">Harry Potter</a>
+            <ul class="nav-ul">
+                <li><a href="index.html" class="nav-link" target="_blank">Home</a></li>
+                <li><a href="search_character.html" class="nav-link" target="_blank">Search Character</a></li>
+                <li><a href="notebook.html" class="nav-link" target="_blank">Note Book</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="bg-image_nb"></div> -->
+    <div class="container_nb">
+        <h1>Harry's To-do List</h1>
+        <input type="text" placeholder="Add new todo..." class="newTodo" />
+
+        <ul class="todos">
+            <li class="todo">
+                <span class="todo-text">Go to Potions class</span>
+                <i class="material-icons delete">clear</i>
+            </li>
+            <li class="todo">
+                <span class="todo-text">Buy new robes</span>
+                <i class="material-icons delete">clear</i>
+            </li>
+            <li class="todo">
+                <span class="todo-text">Visit Hagrid</span>
+                <i class="material-icons delete">clear</i>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let ul = document.querySelector(".todos");
+        let lis = document.querySelectorAll(".todo");
+        let deletes = document.querySelectorAll(".delete");
+        let input = document.querySelector(".newTodo");
+
+        // Add click listeners to <ul> to account for any newly added <li>s
+
+        ul.addEventListener(
+        "click",
+        function (e) {
+            let target = e.target;
+
+            // If target was a <li>
+            if (target.classList.contains("todo-text")) {
+            target.classList.contains("completed")
+                ? target.classList.remove("completed")
+                : target.classList.add("completed");
+            // If target was the <span> inside an <li>
+            } else if (target.classList.contains("delete")) {
+            let li = target.parentElement;
+            e.stopPropagation();
+            li.style.opacity = "0";
+            setTimeout(function () {
+                li.parentNode.removeChild(li);
+            }, 300);
+            }
+        },
+        true
+        );
+
+        // Add listener to input on enter key press
+        // Create a new <li> from input value
+        // Clear input
+
+        input.addEventListener("keypress", function (e) {
+        // If the user presses enter
+        if (e.which == "13") {
+            let newTodo = this.value;
+
+            let li = document.createElement("li");
+            li.classList.add("todo");
+            let span = document.createElement("span");
+            span.classList.add("todo-text");
+            span.innerHTML = newTodo;
+            li.appendChild(span);
+
+            li.innerHTML += "<i class='material-icons delete'>clear</i>";
+
+            ul.appendChild(li);
+
+            input.value = "";
+        }
+        });
+
+    </script>
+</body>
+
+</html>
