@@ -13,11 +13,7 @@ nav {
     align-items: center;
 }
 
-<<<<<<< HEAD
 nav ul {
-=======
-ul {
->>>>>>> 8c14ffd55d9df7e15a961e27de0270fc747b6ade
     background-color: #000;
     display: flex;
     list-style-type: none;
@@ -25,28 +21,20 @@ ul {
     align-items: center;
 }
 
-<<<<<<< HEAD
 nav li {
-=======
-li {
->>>>>>> 8c14ffd55d9df7e15a961e27de0270fc747b6ade
     padding: 0 .5em;
 }
 
 .nav-link {
     transition: color .2s ease-in-out;
-<<<<<<< HEAD
     color: #eaeaea;
     font-size: 18px;
-=======
->>>>>>> 8c14ffd55d9df7e15a961e27de0270fc747b6ade
 }
 
 .nav-link:hover {
     color: #8f94fb;
 }
 
-<<<<<<< HEAD
 nav a {
     text-decoration: none;
 }
@@ -70,46 +58,12 @@ nav i {
 @media screen and (max-width: 600px) {
 
     nav i {
-=======
-a {
-    text-decoration: none;
-}
-
-.nav-logo {
-    font-weight: bolder;
-    margin-right: 1em;
-}
-
-i {
-    visibility: hidden;
-}
-
-header {
-    margin-top: 7em;
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
-    font-size: 3em;
-    color: black;
-    text-align: center;
-}
-
-@media screen and (max-width: 576px) {
-
-    i {
->>>>>>> 8c14ffd55d9df7e15a961e27de0270fc747b6ade
         margin-right: 1em;
         visibility: visible;
         transition: transform .2s ease-in-out;
     }
 
-<<<<<<< HEAD
     nav i:hover {
-=======
-    i:hover {
->>>>>>> 8c14ffd55d9df7e15a961e27de0270fc747b6ade
         transform: scale(1.2);
     }
 
@@ -202,7 +156,6 @@ h1 {
 }
 
 /*film css*/
-<<<<<<< HEAD
 /*notebook css*/
 /*Paralax video*/
 .ParallaxVideo{ 
@@ -215,5 +168,3 @@ position: fixed !important;
 top:0 !important;
 z-index: -999 !important;
 }
-=======
->>>>>>> 8c14ffd55d9df7e15a961e27de0270fc747b6ade
