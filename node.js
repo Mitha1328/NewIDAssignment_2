@@ -42,7 +42,4 @@ const displayCharacters = (characters) => {
 loadCharacters();
 
 /*film javascript*/
-<<<<<<< HEAD
 /*notebook javascript*/
-=======
->>>>>>> 8c14ffd55d9df7e15a961e27de0270fc747b6ade
