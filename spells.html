@@ -6,28 +6,6 @@
         <title>Spell Book</title>
         <link rel="stylesheet" href="style.css">
         <style>
-            body {
-                font-family: 'Comfortaa', sans-serif;
-                background: #111;
-                color: #fff;
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-                text-align: center;
-            }
-            
-            h1 {
-                font: 60px 'Cinzel Decorative';
-                margin: 2em 0 0.2em;
-            }
-            h3 {
-                font: 24px 'Cinzel';
-            }
-            main {
-                margin: 4em auto 8em;
-                max-width: 1200px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
             * {
 	            box-sizing: border-box;
             }
@@ -52,6 +30,38 @@
             .container_sc{
                 color:#100e17
             }
+            body {
+                font-family: 'Comfortaa', sans-serif;
+                background: #111;
+                color: #fff;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+            .trace-motion {
+                stroke-dasharray: 650;
+                stroke-dashoffset: 650;
+                opacity: 0.8;
+            }
+            @keyframes draw {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+            h1 {
+                font: 60px 'Cinzel Decorative';
+                margin: 2em 0 0.2em;
+            }
+            h3 {
+                font: 24px 'Cinzel';
+            }
+            main {
+                margin: 4em auto 8em;
+                max-width: 1200px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
             
         </style>
     </head>
@@ -65,6 +75,7 @@
                     <li><a href="search_character.html" class="nav-link" target="_blank">Search Character</a></li>
                     <li><a href="notebook.html" class="nav-link" target="_blank">Note Book</a></li>
                     <li><a href="login.html" class="nav-link" target="_blank">Logged In</a></li>
+                    <li><a href="spells.html" class="nav-link" target="_blank">Spell List</a></li>
                 </ul>
             </div>
         </nav>
@@ -187,82 +198,850 @@
         Charm
         <div class="wrapper">
             <div class="card-grid">
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Accio</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Summons an object</li>
+                        <br>
+                        <li>Counter Spell: Anti_theft charm</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Aguamenti</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Shoots water from wand</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Alohomora</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Opens locked objects</li>
+                        <br>
+                        <li>Counter Spell: Colloportus</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Avifors</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Turns small objects into birds</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Confundus</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Confuses opponent</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Engorgio</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Enlarges and item</li>
+                        <br>
+                        <li>Counter Spell: Reducio</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Expecto Patronum</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Creates a Patronus</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Expelliarmus</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Hides a secret within someone</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Fidelius</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Disarms your opponent</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Homorphus</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Cures werewolves (at least according to Lockhart)</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Immobulus</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Renders target immobile</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Impedimenta</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Slows an advancing object</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Impervius</li>
+                        <br>
+                        <li>Type: Charm</li>
+                        <br>
+                        <li>Effect: Makes an object repel water</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                
+                
+
             </div>
         </div>
         <br>
         Spells
         <div class="wrapper">
             <div class="card-grid">
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Anapneo</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Clears the target's airway</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Finite Incantatum</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Stops any current spells</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Incarcerous</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Ties someone up</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Incendio</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Starts a fire</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Langlock</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Glues opponent's tongue to roof of mouth</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Legilimens</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Allows the caster to delve into the mind of the victim</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Levicorpus</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Hangs victim upside down by feet</li>
+                        <br>
+                        <li>Counter Spell: Liberacorpus</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Liberacorpus</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Counters Levicorpus</li>
+                        <br>
+                        <li>Counter Spell: Levicorpus</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Flagrate</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Allows user to write on objects</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Expulso</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Makes objects explode</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Evanesco</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Makes objects vanish</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Ferula</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Creates bandages</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Aparecium</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Reveals invisible ink</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Avis</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Launches birds from your wand</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Cave Inimicum</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Strengthens an enclosure from enemies</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Colloportus</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Magically locks door</li>
+                        <br>
+                        <li>Counter Spell: Alohomora</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Defodio</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Digs out materials</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Deletrius</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br><!--Might want to link the spell to the other spell-->
+                        <li>Effect: Counters "Prior Incatato"</li>
+                        <br>
+                        <li>Counter Spell: Prior Incatato</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Densaugeo</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Enlarges Teeth</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Lumos</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Creates light at wand tip</li>
+                        <br>
+                        <li>Counter Spell: Nox</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Deprimo</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Blasts holes through walls and floors</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Diffindo</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Splits seams</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Dissendium</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Opens "One eyed witch" hump</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Duro</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Makes objects hard</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Erecto</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Erects things</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Geminio</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Duplicates an Object</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Glisseo</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Turns stairs into ramps</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Homenum Revelio</li>
+                        <br>
+                        <li>Type: Spell</li>
+                        <br>
+                        <li>Effect: Reveals humans nearby</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
         <br>
         Curses
         <div class="wrapper">
             <div class="card-grid">
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Avada Kedavra</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Murders opponent</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Confringo</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Explodes flames on target</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Conjunctivitis</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Damages opponents eyesight</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Locomotor Mortis</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Locks opponents legs</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Imperio</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Controls a person – unforgivable</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Crucio</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Tortures opponent</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Ennervate</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Counters stupefy</li>
+                        <br>
+                        <li>Counter Spell: Stupefy</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Episkey</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Heals minor injuries</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Furnunculus</li>
+                        <br>
+                        <li>Type: Curse</li>
+                        <br>
+                        <li>Effect: Produces boils on opponent</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
         <br>
         Jinxes
         <div class="wrapper">
             <div class="card-grid">
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-              <div class="card-grid__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="card-grid__item">
+                    <ul>
+                        <li>Name: Flipendo</li>
+                        <br>
+                        <li>Type: Jinx</li>
+                        <br>
+                        <li>Effect: Knocks an object backwards</li>
+                        <br>
+                        <li>Counter Spell: null</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <br>
-        <div class="container_sc" >
-            <h1 style="color: #fff;">&#x2728;Harry Potter Characters &#x2728;</h1> 
-           
-            <!--&#x2728 is a hex code for the sparkle emoji-->
-            <div id="searchWrapper">
-                <input
-                    type="text"
-                    name="searchBar"
-                    id="searchBar"
-                    placeholder="search for a spell"
-                />
-            </div>
-            <ul id="spellList"></ul>
-        </div>
-        <script src="spell_script.js"></script>
+        <!--Further Spells will be added-->
+        <!--
+            [            
+                {
+                "name": "Meteolojinx Recanto",
+                "type": "spell",
+                "effect": "Causes weather effect spells to stop",
+                    "counter_spell": null
+                },
+                {
+                "name": "Mobiliarbus",
+                "type": "charm",
+                "effect": "Moves objects with wand",
+                    "counter_spell": null
+                },
+                {
+                "name": "Mobilicorpus",
+                "type": "spell",
+                "effect": "Moves unconscious bodies",
+                    "counter_spell": null
+                },
+                {
+                "name": "Morsmorde",
+                "type": "spell",
+                "effect": "Conjures the Dark Mark",
+                    "counter_spell": null
+                },
+                {
+                "name": "Muffliato",
+                "type": "spell",
+                "effect": "Prevents nearby people from listening to conversations",
+                    "counter_spell": null
+                },
+                {
+                "name": "Nox",
+                "type": "spell",
+                "effect": "Counters Lumos",
+                    "counter_spell": "Lumos"
+                },
+                {
+                "name": "Obliviate",
+                "type": "charm",
+                "effect": "Erases memories",
+                    "counter_spell": null
+                },
+                {
+                "name": "Obscuro",
+                "type": "spell",
+                "effect": "Blindfolds the victim",
+                    "counter_spell": null
+                },
+                {
+                "name": "Oppugno",
+                "type": "spell",
+                "effect": "Makes conjured items attack",
+                    "counter_spell": null
+                },
+                {
+                "name": "Orchideous",
+                "type": "spell",
+                "effect": "Conjures a bunch of flowers",
+                    "counter_spell": null
+                },
+                {
+                "name": "Pack",
+                "type": "spell",
+                "effect": "Packs a trunk (suitcase)",
+                    "counter_spell": null
+                },
+                {
+                "name": "Peskipiksi Pesternomi",
+                "type": "spell",
+                "effect": "Removes Pixies (maybe)",
+                    "counter_spell": null
+                },
+                {
+                "name": "Petrificus Totalus",
+                "type": "spell",
+                "effect": "Binds body – unforgivable",
+                    "counter_spell": null
+                },
+                {
+                "name": "Piertotum Locomotor",
+                "type": "spell",
+                "effect": "Animates statues and armor suits",
+                    "counter_spell": null
+                },
+                {
+                "name": "Point Me",
+                "type": "charm",
+                "effect": "Makes wand act like a compass",
+                    "counter_spell": null
+                },
+                {
+                "name": "Priori Incantatum",
+                "type": "spell",
+                "effect": "Echoes most recent spells, result when brother wands duel",
+                    "counter_spell": null
+                },
+                {
+                "name": "Prior Incantato",
+                "type": "spell",
+                "effect": "Reveals a wands last spell / cast",
+                    "counter_spell": "Deletrius"
+                },
+                {
+                "name": "Protego",
+                "type": "charm",
+                "effect": "Causes spells to reflect back to the sender. ",
+                    "counter_spell": null
+                },
+                {
+                "name": "Protego Horribilis",
+                "type": "spell",
+                "effect": "Protects one from Dark Magic",
+                    "counter_spell": null
+                },
+                {
+                "name": "Protego Totalum",
+                "type": "spell",
+                "effect": "Protects area",
+                    "counter_spell": null
+                },
+                {
+                "name": "Quietus",
+                "type": "spell",
+                "effect": "Counters Sonorus",
+                    "counter_spell": "Sonorus"
+                },
+                {
+                "name": "Reducio",
+                "type": "spell",
+                "effect": "Returns items to original size. Counters Engorgio",
+                    "counter_spell": "Engorio"
+                },
+                {
+                "name": "Reducto",
+                "type": "spell",
+                "effect": "Blasts solid objects aside",
+                    "counter_spell": null
+                },
+                {
+                "name": "Relashio",
+                "type": "spell",
+                "effect": "Releases user from binding",
+                    "counter_spell": null
+                },
+                {
+                "name": "Rennervate",
+                "type": "spell",
+                "effect": "Cures unconsciousness",
+                    "counter_spell": "Stupefy"
+                },
+                {
+                "name": "Reparifarge",
+                "type": "charm",
+                "effect": "Untransigures an object",
+                    "counter_spell": null
+                },
+                {
+                "name": "Reparo",
+                "type": "spell",
+                "effect": "Repairs Things",
+                    "counter_spell": null
+                },
+                {
+                "name": "Repello Muggletum",
+                "type": "spell",
+                "effect": "Keeps Muggles away",
+                    "counter_spell": null
+                },
+                {
+                "name": "Rictusempra",
+                "type": "charm",
+                "effect": "Tickles opponent",
+                    "counter_spell": null
+                },
+                {
+                "name": "Riddikulus",
+                "type": "spell",
+                "effect": "Turns boggart into ridiculous form so you can laugh it away",
+                    "counter_spell": null
+                },
+                {
+                "name": "Salvio Hexia",
+                "type": "spell",
+                "effect": "Protects against hexes",
+                    "counter_spell": null
+                },
+                {
+                "name": "Scruge",
+                "type": "charm",
+                "effect": "Destroys ectoplasm (remains of ghosts)",
+                    "counter_spell": null
+                },
+                {
+                "name": "Sectumsempra",
+                "type": "spell",
+                "effect": "Causes wounds as if slashed by a sword",
+                    "counter_spell": null
+                },
+                {
+                "name": "Serpensortia",
+                "type": "spell",
+                "effect": "Produces Snake",
+                    "counter_spell": null
+                },
+                {
+                "name": "Silencio",
+                "type": "spell",
+                "effect": "Silences victim",
+                    "counter_spell": null
+                },
+                {
+                "name": "Sonorus",
+                "type": "spell",
+                "effect": "Amplifies voice",
+                    "counter_spell": "Quietus"
+                },
+                {
+                "name": "Specialis Revelio",
+                "type": "spell",
+                "effect": "Reveals Hidden secrets or magical properties",
+                    "counter_spell": null
+                },
+                {
+                "name": "Stupefy",
+                "type": "spell",
+                "effect": "Knocks out opponent",
+                    "counter_spell": "Rennervate"
+                },
+                {
+                "name": "Tarantallegra",
+                "type": "spell",
+                "effect": "Forces opponent to dance",
+                    "counter_spell": null
+                },
+                {
+                "name": "Tergeo",
+                "type": "spell",
+                "effect": "Cleans up messes",
+                    "counter_spell": null
+                },
+                {
+                "name": "Waddiwasi",
+                "type": "spell",
+                "effect": "Unsticks an object",
+                    "counter_spell": null
+                },
+                {
+                "name": "Wingardium Leviosa",
+                "type": "charm",
+                "effect": "Makes on object fly",
+                    "counter_spell": null
+                }
+            ]
+        -->
           
     </body>
 </html>

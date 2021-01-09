@@ -249,11 +249,6 @@ nav i {
 .spell-card:hover .trace-motion {
     animation: draw 0.7s linear forwards;
 }
-.trace-motion {
-    stroke-dasharray: 650;
-    stroke-dashoffset: 650;
-    opacity: 0.8;
-}
 /*Card Boxes*/
 .card-grid {
     height: 90vh;
@@ -263,7 +258,7 @@ nav i {
 }
 .card-grid__item {
     height: 100%;
-    width: 200px;
+    width: 300px;
     min-width: 200px;
     box-shadow: -1rem 0 3rem #000;
     padding: 1rem;
@@ -272,6 +267,7 @@ nav i {
     text-align: center;
     position: relative;
     transition: 0.2s;
+    font-size: 20px;
 }
 .card-grid__item:hover {
     transform: translateY(-1rem);
