@@ -41,5 +41,3 @@ const displayCharacters = (characters) => {
 };
 loadCharacters();
 
-
-/*notebook javascript*/
