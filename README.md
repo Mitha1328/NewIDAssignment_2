@@ -4,15 +4,15 @@ This website will showcase the interesting world and fandom of Harry Potter.
 ### Books
 The first Harry Potter book, Harry Potter and the Philosopher’s Stone, was published by Bloomsbury in 1997 to immediate popular and critical acclaim. Six further best-selling books, three companion books, a playscript and two screenplays have since followed. The Harry Potter books have been translated into over 80 languages, won multiple awards, and sold more than 500 million copies worldwide, becoming the best-selling book series in history
 
-
-
 # Design Process
-Provide us insights about your design process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+This Website is for the fans of Harry Potter.
+Where despite people reading the books or seeing the movie. There are numerourse things that are still a mystery in this fandom. People who see themselves as a student in the hogwarts school for witches and wizarding can come to this website and reference the spell book tab for new spells to learn.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+Harry Potter is based of the olden days. Early 2000s and late 1990s. But I wanted to mix the rich oldness of the storyline with the current studying methods we as students are using.
+According to the Harry Potter books, students in the story buys physical books and writes physical notes to get through their course of wizarding and witchcraft. But in this website, "Students" or users can look back at the set of easily availables spells and other general things related to the Fandom.
 
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory) Include the Adobe XD wireframe as a folder. You can include the XD share url.
+## Adobe XD
+- Link to the wireframes
 
 # Features
 ## Existing Features
@@ -41,7 +41,7 @@ Hence I implemented the script function for almost all of the Html files.
 ## Login Page
 The Login Page I created is linked to the spell.html. where it is stimulated as if the student is logging in this website to take a look at his or her discovered spells and notes on how to cast the spells.
 
-## Responsive Web
+## Responsive Web !!!!!!
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
 ## Interesting Bugs
@@ -50,7 +50,7 @@ In addition, you should mention in this section how your project looks and works
 I tried to copy the json file from the public github repositary and create it from scratch but it did not work also.
 I then didnt want to spend much time on this and went ahead to create just normal text lists where i just fed in the texts to the card deck function in the spells.html file.
 
-# Credits
+# Credits !!!!!!
 # Content
 The text for Books in this ReadMe file was copied from the https://www.wizardingworld.com/discover/books
 # Media References
