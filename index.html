@@ -12,7 +12,7 @@
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="script.js"></script>
+        <script src="index_script.js"></script>
             
         <style>
             @import url('https://fonts.googleapis.com/css?family=Henny+Penny|Open+Sans');
@@ -54,49 +54,24 @@
             width: 95%;
             margin: 0 auto;
             }
-
-
-            /*box office chart*/
-            #boxoffice_chart {
-            height:400px;
-            width:100%;
-            }
-
-            /* award chart */
-            #award_chart_container {
-            margin:0;
-            }
-
-
-            /* location map */
-            #location_map { 
-            height: 500px; 
-            width:100%;
-            margin:0 auto;
-            }
-
-            #map_title, #profiletitle, #sources_title {
-            margin-bottom:20px;
-            font-family: 'Henny Penny', cursive;
-            font-size: 180%;
-            color:black;
+            .container_index {
+                display: flex;
+                align-items: center;
+                margin: 0 .5em;
             }
         </style>
     </head>
     <body>
-        <nav>
-            <div class="container_index"></div>
-                <i class="fa fa-bars"></i>
-                <a href="index.html" class="nav-logo">Harry Potter</a>
-                <ul class="nav-ul">
-                    <li><a href="index.html" class="nav-link" target="_blank">Home</a></li>
-                    <li><a href="search_character.html" class="nav-link" target="_blank">Search Character</a></li>
-                    <li><a href="notebook.html" class="nav-link" target="_blank">Note Book</a></li>
-                    <li><a href="login.html" class="nav-link" target="_blank">Spell Book Login</a></li>
-                    <li><a href="spells.html" class="nav-link" target="_blank">Spell List</a></li>
-                </ul>
-            </div>
-        </nav>
+    
+        <label for="show-menu" class="show-menu">Show Menu</label>
+        <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu">
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="search_character.html" target="_blank">Search Character</a></li>
+                <li><a href="notebook.html" target="_blank">Note Book</a></li>
+                <li><a href="login.html" target="_blank">Spell Book Login</a></li>
+                <li><a href="spells.html" target="_blank">Spell List</a></li>
+            </ul>
     
         <!-- <header>
         </header> -->
@@ -105,8 +80,8 @@
             <!--document title and intro paragraph-->
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <div id="doc_title">
-                        <img id="title" src="HP_Image_1.png" style="height: 200px; width: 550px;">
+                    <div class="doc_title">
+                        <img id="title" src="HP_Image_1.png">
                     </div>
                 </div>
             </div>
@@ -123,8 +98,8 @@
                 </div>
 
                 <div class="col-md-3 text-center">
-                    <div id="boxoffice_flag">
-                        <img src="http://i1043.photobucket.com/albums/b435/sophhibb/flag_zpsfglyjivj.png"/>
+                    <div class="boxoffice_flag">
+                        <img src="HP_Image_4.png" >
                     </div>
                 </div>
             </div>
@@ -132,14 +107,14 @@
             <!--glasses fact-->
             <div class="row row_margin">
                 <div class="col-md-6 text-center">
-                    <div id="glasses_fact">
-                        <img src="http://i1043.photobucket.com/albums/b435/sophhibb/glasses-fact_zpseynbqkkw.png">
+                    <div class="glasses_fact">
+                        <img src="glasses-fact.png">
                     </div>
                 </div>
 
                 <div class="col-md-6 text-center">
-                    <div id="glasses_img">
-                        <img src="HP_Image_2.png" style="height: 300px; width: 400px;">
+                    <div class="glasses_img">
+                        <img src="HP_Image_2.png">
 
                     </div>
                 </div>
@@ -148,14 +123,14 @@
             <!--awards-->
             <div class="row row_margin">
                 <div class="col-md-5 text-center">
-                    <div id="trophy">
-                        <img src="http://i1043.photobucket.com/albums/b435/sophhibb/award_zpsb7zzi0cv.png">
+                    <div class="trophy">
+                        <img src="HP_Image_3.png">
                     </div>
                 </div>
             
                 <div class="col-md-7 text-center">
                     <div id="award_chart">
-                        <div id="award_chart_container" style="height: 400px; width: 500px;"></div>
+                        <div id="award_chart_container" style="height: 400px; width: 500px; align-items: center;"></div>
                     </div>
                 </div>
             </div>
@@ -163,17 +138,16 @@
             <!-- filiming locations-->    
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 id="map_title">Harry Potter UK Filming Locations</h1>
+                <h1 id="map_title">Harry Potter UK Filming Locations</h1>
                 </div>
             </div>
 
             <div class="row row_margin">
                 <div class="col-md-12 text-center">
-                    <div id="location_map"></div>
+                <div id="location_map"></div>
                 
                 </div>
             </div>
-
             <!--sources-->
             <div class="row row_margin">
                 <div class="col-md-12 text-center">
@@ -181,8 +155,6 @@
                     <div class="sources">
                         <h1 id="sources_title">Sources</h1>
                         <p>Budget vs. Box Office: <a class="sources_link" href="http://www.the-numbers.com/movies/franchise/Harry-Potter#tab=summary">http://www.the-numbers.com/movies/franchise/Harry-Potter#tab=summary</a></p>
-                        
-                        <p>Glasses Fact: <a class="sources_link" href="https://www.telegraph.co.uk/culture/harry-potter/8621235/Harry-Potter-by-numbers.html">https://www.telegraph.co.uk/culture/harry-potter/8621235/Harry-Potter-by-numbers.html</a></p>
                         
                         <p>Harry Potter Profiles: <a class="sources_link" href="https://github.com/SkyHacks/nerds/blob/master/dist/topics/harry_potter.js"> https://github.com/SkyHacks/nerds/blob/master/dist/topics/harry_potter.js</a></p>
                         
@@ -193,11 +165,7 @@
             </div>
         </div>
         <script>
-            const burger = document.querySelector('i');
-            const target = document.querySelector('.nav-ul')
-
-            burger.addEventListener('click', ()=>{
-                target.classList.toggle('visible');})
+            
         </script>
         <script src="index_script.js"></script>
     </body>

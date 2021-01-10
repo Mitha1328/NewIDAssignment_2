@@ -12,7 +12,7 @@ Harry Potter is based of the olden days. Early 2000s and late 1990s. But I wante
 According to the Harry Potter books, students in the story buys physical books and writes physical notes to get through their course of wizarding and witchcraft. But in this website, "Students" or users can look back at the set of easily availables spells and other general things related to the Fandom.
 
 ## Adobe XD
-- Link to the wireframes
+- [Link to the wireframes](https://xd.adobe.com/view/7745e4ea-221e-4631-999a-8454bc3d272f-2216/)
 
 # Features
 ## Existing Features
@@ -41,8 +41,9 @@ Hence I implemented the script function for almost all of the Html files.
 ## Login Page
 The Login Page I created is linked to the spell.html. where it is stimulated as if the student is logging in this website to take a look at his or her discovered spells and notes on how to cast the spells.
 
-## Responsive Web !!!!!!
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+## Responsive Web
+- This website will resize itself at 860px
+- Most of the pages i have coded for the resizeing but the rest such as search-character file will automatically resize due to the fact that it is in the form of flex box
 
 ## Interesting Bugs
 * In the spells section, I tried to use java script to code to make sure I have used the API of spells I found out from online. But due to the reason the API was in github format the code got confused and did not fully execute the JS file.
@@ -50,7 +51,8 @@ In addition, you should mention in this section how your project looks and works
 I tried to copy the json file from the public github repositary and create it from scratch but it did not work also.
 I then didnt want to spend much time on this and went ahead to create just normal text lists where i just fed in the texts to the card deck function in the spells.html file.
 
-# Credits !!!!!!
+The spells.html file is running into many bugs. This I have inserted the style sheet in the main head itself, instead of linking it.
+
 # Content
 The text for Books in this ReadMe file was copied from the https://www.wizardingworld.com/discover/books
 # Media References
@@ -59,6 +61,8 @@ The photos used in this site were obtained from
 - HP_Image_1.png - https://www.pngkey.com/download/u2q8i1i1q8t4a9w7_harry-potter-logo-png-transparent-harry-potter-vector/
 
 - HP_Image_2.png - https://www.iconfinder.com/search/?q=harry%20potter
+  
+- HP_Image_3.png - https://www.flaticon.com/free-icon/trophy_1152912?term=trophy&page=1&position=2&related_item_id=1152912
 
 - Galaxy_1.mp4 - https://youtu.be/X6dJEAs0-Gk
 

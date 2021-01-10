@@ -7,12 +7,15 @@
         <title>Search Character</title>
         <link rel="stylesheet" href="style.css">
         <style>
+            * {
+                font-family: 'Poppins', sans-serif;
+                color: rgb(0, 0, 0);
+                margin: 0;
+                padding: 0;
+            }
             body {
                 font-family: sans-serif;
                 background-color: #0e0d0d;
-            }
-            * {
-                box-sizing: border-box;
             }
             h1 {
                 color: #eee;
@@ -21,19 +24,16 @@
         </style>
     </head>
     <body>
-        <nav>
-            <div class="container_index"></div>
-                <i class="fa fa-bars"></i>
-                <a href="index.html" class="nav-logo">Harry Potter</a>
-                <ul class="nav-ul">
-                    <li><a href="index.html" class="nav-link" target="_blank">Home</a></li>
-                    <li><a href="search_character.html" class="nav-link" target="_blank">Search Character</a></li>
-                    <li><a href="notebook.html" class="nav-link" target="_blank">Note Book</a></li>
-                    <li><a href="login.html" class="nav-link" target="_blank">Login</a></li>
-                    <li><a href="spells.html" class="nav-link" target="_blank">Spell List</a></li>
-                </ul>
-            </div>
-        </nav>
+    
+        <label for="show-menu" class="show-menu">Show Menu</label>
+        <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu">
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="search_character.html" target="_blank">Search Character</a></li>
+                <li><a href="notebook.html" target="_blank">Note Book</a></li>
+                <li><a href="login.html" target="_blank">Spell Book Login</a></li>
+                <li><a href="spells.html" target="_blank">Spell List</a></li>
+            </ul>
         <div class="ParallaxVideo">
             <video autoplay muted loop>
             <source src="Galaxy_1.mp4" type="video/mp4">
@@ -54,5 +54,12 @@
             <ul id="charactersList"></ul>
         </div>
         <script src="script.js"></script>
+        <script>
+            const burger = document.querySelector('i');
+            const target = document.querySelector('.nav-ul')
+
+            burger.addEventListener('click', ()=>{
+                target.classList.toggle('visible');})
+        </script>
     </body>
 </html>

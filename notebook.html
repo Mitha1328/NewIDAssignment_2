@@ -14,9 +14,6 @@
             padding: 0;
             font-family: "Almendra SC";
             }
-            nav{
-                font-family: 'Poppins', sans-serif;;
-            }
 
             h1 {
             color: #242424;
@@ -27,13 +24,13 @@
             font-weight: normal;
             }
 
-            ul {
+            .container_nb ul {
             list-style: none;
             margin: 0;
             padding: 0;
             }
 
-            li {
+            .container_nb li {
             color: #242424;
             font-size: 20px;
             padding: 20px;
@@ -92,19 +89,16 @@
             <source src="Galaxy_1.mp4" type="video/mp4">
             </video>
         </div>
-        <nav>
-            <div class="container_index"></div>
-                <i class="fa fa-bars"></i>
-                <a href="index.html" class="nav-logo">Harry Potter</a>
-                <ul class="nav-ul">
-                    <li><a href="index.html" class="nav-link" target="_blank">Home</a></li>
-                    <li><a href="search_character.html" class="nav-link" target="_blank">Search Character</a></li>
-                    <li><a href="notebook.html" class="nav-link" target="_blank">Note Book</a></li>
-                    <li><a href="login.html" class="nav-link" target="_blank">Login</a></li>
-                    <li><a href="spells.html" class="nav-link" target="_blank">Spell List</a></li>
-                </ul>
-            </div>
-        </nav>
+        
+        <label for="show-menu" class="show-menu">Show Menu</label>
+        <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu">
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="search_character.html" target="_blank">Search Character</a></li>
+                <li><a href="notebook.html" target="_blank">Note Book</a></li>
+                <li><a href="login.html" target="_blank">Spell Book Login</a></li>
+                <li><a href="spells.html" target="_blank">Spell List</a></li>
+            </ul>
         <!-- <div class="bg-image_nb"></div> -->
         <div class="container_nb">
             <h1>Harry's To-do List</h1>
@@ -126,5 +120,12 @@
             </ul>
         </div>
         <script src="notebook.js"></script>
+        <script>
+            const burger = document.querySelector('i');
+            const target = document.querySelector('.nav-ul')
+
+            burger.addEventListener('click', ()=>{
+                target.classList.toggle('visible');})
+        </script>
     </body>
 </html>
